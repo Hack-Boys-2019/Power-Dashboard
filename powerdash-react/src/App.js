@@ -1,16 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Sunburst from 'sunburst-chart';
-
-
+import Main from './Main.js';
 
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+  return Main();
 }
 
 export default App;
