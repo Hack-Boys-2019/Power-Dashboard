@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Setup
 
-To use react you must install node.js which can be found here: https://nodejs.org/en/download/
+To use react you must install node.js which can be found here: https://www.npmjs.com/get-npm
 
 
 ## Available Scripts
