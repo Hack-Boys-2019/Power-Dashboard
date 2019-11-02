@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: powerdash
+Version: 0.1.0
+Summary: Power Dashboard for Hackathon ENGIE challenge
+Home-page: UNKNOWN
+Author: Tom Paoloni
+Author-email: paoloni.6@osu.edu
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7,<4.0
