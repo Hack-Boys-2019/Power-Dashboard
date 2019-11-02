@@ -1,6 +1,6 @@
 import React from 'react';
 import './Main.css';
-import Chart from 'react-chartjs-2'
+import Chart from 'react-chartjs-2';
 
 function Main() {
     var speedData = {
@@ -32,14 +32,15 @@ function Main() {
             <div id="sunburst"></div>
             <div id="line-graph"></div>
             <div id="analogy"></div>
-            <div id="map"></div>
             <Chart
             type="line"
             data={speedData}
             width={100}
             height={50}
             options={chartOptions}
-            />
+            />            
+            <div id="mapid"></div>
+
         </div>
 
         
