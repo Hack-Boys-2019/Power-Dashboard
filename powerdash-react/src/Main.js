@@ -54,6 +54,16 @@ function Main() {
     }
     return (
         <div>
+            <div id="sunburst"></div>
+            <div id="line-graph"></div>
+            <div id="analogy"></div>
+            <Chart
+            type="line"
+            data={speedData}
+            width={100}
+            height={50}
+            options={chartOptions}
+            />        
             <ToggleButtonGroup id="utility-toggle" type="radio" name="utilities" defaultValue={1}>
                 <ToggleButton variant="light" value={1} onClick={() => changeUtility(1)}>Electricity</ToggleButton>
                 <ToggleButton variant="light" value={2} onClick={() => changeUtility(2)}>Hot Water</ToggleButton>
@@ -70,6 +80,7 @@ function Main() {
                 options={chartOptions}
                 />
             </div>
+            <div id="mapid"></div>
         </div>
 
         
