@@ -1,0 +1,4 @@
+server/venv
+server/powerdash/data
+server/powerdash.egg-info
+server/powerdash/__pycache__
