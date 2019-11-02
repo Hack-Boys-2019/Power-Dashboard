@@ -53,24 +53,14 @@ function Main() {
         document.body.style.backgroundColor = color
     }
     return (
-        <div>
-            <div id="sunburst"></div>
-            <div id="line-graph"></div>
-            <div id="analogy"></div>
-            <Chart
-            type="line"
-            data={speedData}
-            width={100}
-            height={50}
-            options={chartOptions}
-            />        
+        <div>      
             <ToggleButtonGroup id="utility-toggle" type="radio" name="utilities" defaultValue={1}>
                 <ToggleButton variant="light" value={1} onClick={() => changeUtility(1)}>Electricity</ToggleButton>
                 <ToggleButton variant="light" value={2} onClick={() => changeUtility(2)}>Hot Water</ToggleButton>
                 <ToggleButton variant="light" value={3} onClick={() => changeUtility(3)}>Chilled Water</ToggleButton>
                 <ToggleButton variant="light" value={4} onClick={() => changeUtility(4)}>Steam</ToggleButton>
             </ToggleButtonGroup>
-            <div id="sun-burst"></div>
+            <div id="sunburst"></div>
             <div id="line-chart">
                 <Chart
                 type="line"

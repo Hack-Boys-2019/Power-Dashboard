@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-#sun-burst {
+#sunburst {
     width: 600px;
     margin-left: auto ;
     margin-right: auto ;
@@ -18,7 +18,8 @@
     margin-right: auto;
     background-color: white;
     padding: 50px;
-    border-radius: 50px;
+    border-radius: 30px;
+    margin-bottom: 100px;
 }
 
 #utility-toggle {
@@ -29,4 +30,13 @@
 
 #utility-button {
     background-color: white;
+}
+
+#mapid {
+    width: 700px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    border-radius: 30px;
 }
