@@ -1,7 +1,11 @@
 import pandas as pd
 class meter:
-    def __init__(self, meter_id):
+    def __init__(self, meter_id, desc, units,rsrc,act_date):
         self.meter_id = meter_id
+        self.desc = desc
+        self.unit = units
+        self.rsrc = rsrc
+        self.act_date = act_date
 class building:
     def __init__(self, bld_id, bld_name, sqr_feet, bld_date, lat, longt, campus, org, loc_type, stm_src, cwtr_src, hwtr_src):
         self.bld_id = bld_id
