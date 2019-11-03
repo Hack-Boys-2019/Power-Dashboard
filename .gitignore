@@ -1,3 +1,4 @@
 */venv
 server/powerdash/data
 server/powerdash/__pycache__
+*.db
