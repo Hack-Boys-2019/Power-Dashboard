@@ -25,6 +25,14 @@ class ApiHandler extends React.Component {
                 console.log(error);
             }
         );
+        axios.get(
+            'http://localhost:8080/configApi').then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+            }
+        );
 
     }
 

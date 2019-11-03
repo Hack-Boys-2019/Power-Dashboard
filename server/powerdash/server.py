@@ -34,7 +34,15 @@ class Server:
         df = dm.test_values(identifier, hdb)
         print(df)
 
-        return df.to_json()
+        return df.to_json(orient='records')
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def configApi(self, urlParam1=None):
+        cdb = g.return_config_db()
+        df = dm.test_config_values(cdb)
+
+        return df.to_json(orient='records')
 
 def CORS():
     cherrypy.response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
@@ -43,7 +51,7 @@ def CORS():
 def main():
     #g = generator()
     #g.initialize_generator('./powerdash/data/HackathonConfig.csv', './powerdash/data/HackathonDataHourly1of2.csv','./powerdash/data/HackathonDataHourly2of2.csv','./powerdash/data/HackathonDataDaily.csv')
-
+    
     cherrypy.server.socket_host = '0.0.0.0'
     cherrypy.tree.mount(Server(), "/", config={
         '/':

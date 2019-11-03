@@ -8,7 +8,11 @@ class DataManipulator:
     def total(self, type, id, start_time, end_time, database):
         pass
     def test_values(self,id,database):
-        df = pd.read_sql_query(f'SELECT MeterId,CurrentValue FROM `table` WHERE MeterId = \'{id}\' ORDER BY ROWID ;', database)
+        df = pd.read_sql_query(f'SELECT MeterId,CurrentValue,Time,Unit FROM `table` WHERE MeterId = \'{id}\' ORDER BY ROWID ;', database)
+        return df
+
+    def test_config_values(self, database):
+        df = pd.read_sql_query(f'SELECT * FROM `table` ORDER BY ROWID ;', database)
         return df
 #g = generator()
 #daily_db = g.return_daily_db()
