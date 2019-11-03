@@ -2,7 +2,7 @@ import cherrypy
 import os
 
 from .response import Response
-
+ 
 class Server:
     def __init__(self):
         self._response = Response()
