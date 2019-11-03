@@ -76,3 +76,15 @@
 .AnaItem{
     
 }
+
+#lotsOfImg {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#lotsOfImg img {
+    width: 200px;
+}

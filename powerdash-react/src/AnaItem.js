@@ -1,18 +1,14 @@
-import React from 'react';
-import Main from './Main.js';
-
 var anaNum = [[2000,4],[4,150]]; //Tesla Model3 50 kWh battery 220mi range.. xkwh/50
 var anaItem = [["LED light bulbs for one hour", "Tesla Model 3's for a full charge"],["Bathtubs","Cups of Coffee"]]//ledLight bulbs ~10w 1000 bulbs=10000w =10Kw   xkwh/.01 = #bulbs per hour
-var anaImg = ["imgSrs","imgSrs"];//filePath
+var anaImg = [["imgSrs","./tesla.png"], ["imgSrs", "imgSrs"], ["imgSrs", "imgSrs"]];//filePath
 var anaCur = [0,0];
-var firstTime=true;
 var consType=0;
 
 var changeNum = function(type){
-    if(type==0){
+    if(type===0){
         anaCur[1]++
     }
-    else if(type==1){
+    else if(type===1){
         anaCur[1]--
     }
      
@@ -65,6 +61,8 @@ var fun = function(type){
             head.appendChild(text);
             anaCur[0]=0
             break;
+        default:
+            break;
     }
     doc.appendChild(head);
     doc.appendChild(head2);
@@ -72,7 +70,7 @@ var fun = function(type){
     while(doc2.firstChild){
         doc2.removeChild(doc2.firstChild)
     }   
-    var doc2 = document.getElementById('lotsOfImg');
+    doc2 = document.getElementById('lotsOfImg');
     for(var i =0; i<anaNum[anaCur[0]][anaCur[1]];i++){
         var img = document.createElement('img');
         img.src=anaImg[anaCur[0]][anaCur[1]];
