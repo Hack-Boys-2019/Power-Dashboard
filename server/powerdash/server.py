@@ -5,6 +5,11 @@ import json
 
 from .response import Response
 from .generator import generator
+from .data_manipulator import DataManipulator
+
+
+dm = DataManipulator()
+g = generator()
 
 class Server:
     def __init__(self):
@@ -25,7 +30,11 @@ class Server:
         start_time = data['start_time']
         end_time = data['end_time']
 
-        return json.dumps({"c": 0, "b": 0, "a": 0}, sort_keys=True)
+        hdb = g.return_hourly_db()
+        df = dm.test_values(identifier, hdb)
+        print(df)
+
+        return df.to_json()
 
 def CORS():
     cherrypy.response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"

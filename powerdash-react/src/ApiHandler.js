@@ -6,7 +6,7 @@ class ApiHandler extends React.Component {
         var data = {
             "operation":"avg",
             "type":"all",
-            "id":"", 
+            "id":"OSU_RTS.MDBUS_E1.163E2", 
             "hourly_or_daily": "hourly",
             "start_time":"2017-08-17",
             "end_time":"2019-10-12"

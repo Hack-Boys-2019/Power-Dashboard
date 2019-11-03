@@ -51,6 +51,13 @@
     z-index:100;
 }
 
+#hourly-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 420px;
+    z-index:100;
+}
+
 #utility-button {
     background-color: white;
 }

@@ -33,12 +33,19 @@ function changeUtility(value) {
 class UtilityToggle extends React.Component {
     render() {
         return (
-            <ToggleButtonGroup id="utility-toggle" type="radio" name="utilities" defaultValue={1}>
-                <ToggleButton variant="light" value={1} onClick={() => changeUtility(1)}>Electricity</ToggleButton>
-                <ToggleButton variant="light" value={2} onClick={() => changeUtility(2)}>Hot Water</ToggleButton>
-                <ToggleButton variant="light" value={3} onClick={() => changeUtility(3)}>Chilled Water</ToggleButton>
-                <ToggleButton variant="light" value={4} onClick={() => changeUtility(4)}>Steam</ToggleButton>
-            </ToggleButtonGroup>
+            <div>
+                <ToggleButtonGroup id="utility-toggle" type="radio" name="utilities" defaultValue={1}>
+                    <ToggleButton variant="light" value={1} onClick={() => changeUtility(1)}>Electricity</ToggleButton>
+                    <ToggleButton variant="light" value={2} onClick={() => changeUtility(2)}>Hot Water</ToggleButton>
+                    <ToggleButton variant="light" value={3} onClick={() => changeUtility(3)}>Chilled Water</ToggleButton>
+                    <ToggleButton variant="light" value={4} onClick={() => changeUtility(4)}>Steam</ToggleButton>
+                </ToggleButtonGroup>
+
+                <ToggleButtonGroup id="hourly-toggle" type="radio" name="hourly" defaultValue={1}>
+                    <ToggleButton variant="light" value={1} onClick={() => function (){}}>Hourly</ToggleButton>
+                    <ToggleButton variant="light" value={2} onClick={() => function (){}}>Daily</ToggleButton>
+                </ToggleButtonGroup>
+            </div>
         );
     }
 }
