@@ -1,5 +1,5 @@
 import pandas as pd
-from data_classes import building, meter
+from .data_classes import building, meter
 from sqlalchemy import create_engine
 
 class generator:
