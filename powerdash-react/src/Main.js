@@ -2,9 +2,10 @@ import React from 'react';
 import './Main.css';
 import Chart from 'react-chartjs-2'
 import Sunburst from 'sunburst-chart';
+import datas from './datas.js'
+import ReactFullpage from '@fullpage/react-fullpage';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import ToggleButton from 'react-bootstrap/ToggleButton'
-import datas from './datas.js'
 
 function Main() {
     var speedData = {
@@ -32,49 +33,45 @@ function Main() {
         }
       };
 
-    function changeUtility(value) {
-        var color = '#2ecc71'
-        switch (value) {
-            case 1: 
-                color = '#2ecc71'
-                break;
-            case 2: 
-                color = '#e67e22'
-                break;
-            case 3: 
-                color = '#3498db'
-                break;
-            case 4: 
-                color = '#34495e'
-                break;
-            default:
-                color = '#2ecc71'
-        }
-        document.body.style.backgroundColor = color
-    }
-    return (
-        <div>      
-            <ToggleButtonGroup id="utility-toggle" type="radio" name="utilities" defaultValue={1}>
-                <ToggleButton variant="light" value={1} onClick={() => changeUtility(1)}>Electricity</ToggleButton>
-                <ToggleButton variant="light" value={2} onClick={() => changeUtility(2)}>Hot Water</ToggleButton>
-                <ToggleButton variant="light" value={3} onClick={() => changeUtility(3)}>Chilled Water</ToggleButton>
-                <ToggleButton variant="light" value={4} onClick={() => changeUtility(4)}>Steam</ToggleButton>
-            </ToggleButtonGroup>
-            <div id="sunburst"></div>
-            <div id="line-chart">
-                <Chart
-                type="line"
-                data={speedData}
-                width={100}
-                height={65}
-                options={chartOptions}
-                />
-            </div>
-            <div id="mapid"></div>
-        </div>
+    return (<ReactFullpage
+        //fullpage options
+        scrollingSpeed = {1000} /* Options here */
+        navigation='true'
+        navigationTooltips={['firstSlide', 'secondSlide', 'thirdSlide']}
 
-        
-    );
+        render={({ state, fullpageApi }) => {
+            return (
+                <ReactFullpage.Wrapper>
+                    <div className="section">
+                        <div id="chart-vertical-flex">
+                            <div id="sunburst-flex">
+                                <div id="sunburst"></div>
+                            </div>
+                            <div id="line-chart-flex">
+                                <div id="line-chart">
+                                    <Chart
+                                    type="line"
+                                    data={speedData}
+                                    width={100}
+                                    height={65}
+                                    options={chartOptions}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="line-graph-section" className="section">
+
+
+                    </div>
+                    <div className="section">
+                        <div id="mapid"></div>
+                    </div>
+                </ReactFullpage.Wrapper>
+                
+            );
+        }}
+    />);
 }
 
 export default Main;

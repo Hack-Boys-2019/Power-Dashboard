@@ -1,31 +1,54 @@
-#mapid {
-    height: 1000px;
+#chart-vertical-flex {
     width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#line-chart-flex {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#sunburst-flex {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #sunburst {
-    width: 600px;
-    margin-left: auto ;
-    margin-right: auto ;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    width: 640px;
+    height: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 500px;
+    margin-left: 75px;
 }
 
 #line-chart {
-    width: 700px;
-    height: 500px;
+    width: 600px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     padding: 50px;
     border-radius: 30px;
-    margin-bottom: 100px;
+    margin-right: 75px;
 }
 
 #utility-toggle {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     left: 20px;
+    z-index:100;
 }
 
 #utility-button {
@@ -33,10 +56,15 @@
 }
 
 #mapid {
-    width: 700px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+#line-graph-section {
+    background-color: #27ae60;
+}
+
+#fp-nav span  {
+    background-color: white !important;
+    box-shadow: 0px 1px black;
 }
