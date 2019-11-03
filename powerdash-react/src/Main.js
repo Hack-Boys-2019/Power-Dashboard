@@ -1,11 +1,7 @@
 import React from 'react';
 import './Main.css';
 import Chart from 'react-chartjs-2'
-import Sunburst from 'sunburst-chart';
-import datas from './datas.js'
 import ReactFullpage from '@fullpage/react-fullpage';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
-import ToggleButton from 'react-bootstrap/ToggleButton'
 
 function Main() {
     var speedData = {

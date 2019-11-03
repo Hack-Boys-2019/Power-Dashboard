@@ -10,7 +10,6 @@ function App() {
     <UtilityToggle />
     {Main()}
   </div>);
-  return Main();
 }
 
 export default App;
