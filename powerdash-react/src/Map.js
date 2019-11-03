@@ -8,6 +8,14 @@ var map = function() {
 		id: 'mapbox.streets',
 		accessToken: 'pk.eyJ1IjoiY2hyaXNjbGFya2U5NDAiLCJhIjoiY2syaTFueXphMGswcTNjbnZkeWVzbjdvZCJ9.gph5LuSaU02yckZ9kVWaNQ'
 	}).addTo(mymap);
+	addMarkers(mymap, L);
+}
+
+function addMarkers(mymap, L){
+	for(var i=0;i<2;i++){
+		var marker = L.marker([40.00001+i/1000, -83.018795]).addTo(mymap);
+		marker.bindPopup('<p>Hello world!<br />This is a nice popup.</p>').openPopup();
+	}
 }
 
 export default map

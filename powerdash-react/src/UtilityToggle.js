@@ -1,6 +1,7 @@
 import React from 'react';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import ToggleButton from 'react-bootstrap/ToggleButton'
+import fun from './AnaItem.js'
 
 function changeUtility(value) {
     var color = '#2ecc71'
@@ -9,18 +10,22 @@ function changeUtility(value) {
         case 1: 
             color = '#2ecc71'
             secondColor = '#27ae60'
+            fun(1)
             break;
         case 2: 
             color = '#e67e22'
             secondColor = '#d35400'
+            fun(2)
             break;
         case 3: 
             color = '#3498db'
             secondColor = '#2980b9'
+            fun(3)
             break;
         case 4: 
             color = '#34495e'
             secondColor = '#1c2732'
+            fun(4)
             break;
         default:
             color = '#2ecc71'

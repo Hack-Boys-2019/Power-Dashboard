@@ -2,10 +2,11 @@ import React from 'react';
 import './Main.css';
 import Chart from 'react-chartjs-2'
 import Sunburst from 'sunburst-chart';
-import datas from './datas.js'
+import datas from './datas.js';
 import ReactFullpage from '@fullpage/react-fullpage';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
-import ToggleButton from 'react-bootstrap/ToggleButton'
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import { changeNum} from './AnaItem.js';
 
 function Main() {
     var speedData = {
@@ -61,8 +62,12 @@ function Main() {
                         </div>
                     </div>
                     <div id="line-graph-section" className="section">
-
-
+                        <div id="AnaType"></div>
+                        <button id="upOneItem" onClick = {() =>changeNum(0)}>^</button>
+                        <button id="downOneItem" onClick={() =>changeNum(1)} >V</button>
+                        <div id="lotsOfImg">
+                            
+                        </div>
                     </div>
                     <div className="section">
                         <div id="mapid"></div>
